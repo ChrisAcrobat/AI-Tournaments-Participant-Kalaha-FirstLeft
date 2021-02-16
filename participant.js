@@ -1,7 +1,4 @@
 'use strict'
-ParticipantHelper.init = data => {
-	postMessage(null);
-}
 ParticipantHelper.onmessage = data => {
 	let length = (data.length/2) - 1;
 	for(let i = 0; 0 < length; i++){
