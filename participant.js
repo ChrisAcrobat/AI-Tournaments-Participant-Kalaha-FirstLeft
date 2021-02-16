@@ -1,14 +1,13 @@
 'use strict'
-function tock(messageEvent){
-	let length = (messageEvent.data.length/2) - 1;
+ParticipantHelper.init = data => {
+	postMessage(null);
+}
+ParticipantHelper.onmessage = data => {
+	let length = (data.length/2) - 1;
 	for(let i = 0; 0 < length; i++){
-		if(0 < messageEvent.data[i]){
-			postMessage(i);
+		if(0 < data[i]){
+			ParticipantHelper.respond(i);
 			return;
 		}
 	}
 }
-onmessage = messageEvent => {
-	onmessage = tock;
-	postMessage(null);
-};
